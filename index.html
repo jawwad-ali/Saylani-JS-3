@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Saylani JS Project</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <button onclick="doAlert()">Click to Alert</button> <br> <br>
+
+                <div class="mobile-img-div">
+                    <div>
+                        <img onclick="Greet()" class="mobile-img"
+                            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                            alt="">
+                    </div>
+                    <div>
+                        <img onclick="Greet()" class="mobile-img"
+                            src="https://m.economictimes.com/thumb/msid-71641818,width-1200,height-900,resizemode-4,imgsize-587039/getty.jpg"
+                            alt="">
+                    </div>
+                    <div>
+                        <img onclick="Greet()" class="mobile-img"
+                            src="https://champw.com/wp-content/uploads/2020/04/TJDYpZN3r8B7onh2imuNah.jpg" alt="">
+                    </div>
+                </div>
+
+                <p id="counter"></p>
+                <button onclick=Inc()>Increase</button>
+                <button onclick="Dec()">Decrease</button> <br> <br>
+
+                <div class="">
+                    <!-- <img class="mouseover-img" id="before" src="https://static-ssl.businessinsider.com/image/5d9b5bff52887931e8497a36-1405/141222twnmustang.jp2" alt="" onmouseover=swapImg()> -->
+                    <img src="https://static-ssl.businessinsider.com/image/5d9b5bff52887931e8497a36-1405/141222twnmustang.jp2"
+                        id="before" class="mouseover-img" onmouseover="swapImg('before' , 'carimgone.jpg')"
+                        onmouseout="swapImg('before' , 'carimgtwo.png')" alt="Car image">
+                </div>
+
+                <div class="mt-5">
+                    <table class="table table-stripped" id="table">
+                        <tr id="tr">
+                            <th>NAME</th>
+                            <th>FATHER NAME</th>
+                            <th>CLASS</th>
+                            <th>ACTION</th>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Ali Asghar</td>
+                            <td id="td">Hasnanin Raza</td>
+                            <td id="td">Montesorri</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Muhammad Taha </td>
+                            <td id="td">Asif Raza</td>
+                            <td id="td">II</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Muhammad Muslim</td>
+                            <td id="td">Qamar Abbas</td>
+                            <td id="td">II</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr"> 
+                            <td id="td">Zakir Ali</td>
+                            <td id="td">Sadiq</td>
+                            <td id="td">II</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Zara Batool</td>
+                            <td id="td">Sohail Abbas</td>
+                            <td id="td">III</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Hiba Fatima</td>
+                            <td id="td">Asif Raza</td>
+                            <td id="td">I</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Auj Hussain</td>
+                            <td id="td">Muhammad Abbas</td>
+                            <td id="td">Kinder Garden</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Muhammad Samad</td>
+                            <td id="td">Sohail Abbas</td>
+                            <td id="td">I</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Rayaan Raza</td>
+                            <td id="td">Sadiq</td>
+                            <td id="td">II</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                        <tr id="tr">
+                            <td id="td">Shayan Raza</td>
+                            <td id="td">Rohaani</td>
+                            <td id="td">IV</td>
+                            <td id="td"> <button class="btn btn-danger" onclick="delStdRecord(this)">DELETE</button> </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr>
+
+                <input type="text" class="form-control" placeholder="First Name" id="fname"> <br>
+                <input type="text" class="form-control" placeholder="Last Name" id="lname"> <br>
+                <input type="email" class="form-control" placeholder="Email" id="email" autocomplete="off"> <br>
+                <input type="password" class="form-control" placeholder="Password" id="pass"> <br>
+                <input type="date" class="form-control" id="date">
+                <div class="text-center"> <br>
+                    <button class="btn btn-primary" id="submit" onclick="getVal()">Sign Up</button> <br> <br>
+                </div>
+
+                <div class="expandParagraph" id="expandParagraph">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard
+                        dummy text ever since the 1500s <a href="javascript:void(0);" onclick="expandPara()">Load
+                            More</a>
+                    </p>
+                </div>
+
+
+                <!-- CHAPTER 49 TASK 2 -->
+                <h1 class="text-center ">Student Details</h1>
+                <div class="display-flex mt-5">
+                    <input class="std-name" id="std_name" type="text" placeholder="Student Name">
+                    <input class="roll-no" id="roll_no" type="text" placeholder="Student Roll Number">
+                    <input type="submit" id="submit" value="Send Details" class="btn btn-success"
+                        onclick="getStudentDetails()">
+                </div>
+
+                <table class="table table-bordered" id="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>ACTION</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+.mobile-img-div{
+    border:1px solid gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+.mobile-img{
+    height: 200px;
+    width: 250px;
+    padding:15px;
+    cursor: pointer;
+}
+.mouseover-img{
+    height: 350px;
+    width: 50%;
+    cursor: pointer;
+}
+.display-flex{
+    display: flex;
+    justify-content: center;
+}
+.std-name , .roll-no{
+    text-align: center;
+}
+.table-data , .btn-danger{
+    margin:10px !important;
+}
